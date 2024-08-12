@@ -38,7 +38,9 @@ setup(
     entry_points={
         'console_scripts': [
             'mqtt_to_ros_bridge_node = isaac_ros_mqtt_bridge.MqttToRosNode:main',
-            'ros_to_mqtt_bridge_node = isaac_ros_mqtt_bridge.RosToMqttNode:main'
+            'ros_to_mqtt_bridge_node = isaac_ros_mqtt_bridge.RosToMqttNode:main',
+            'turtlebot4_mqtt_to_ros_bridge_node = isaac_ros_mqtt_bridge.MqttToRosNodeTurtlebot4:main',
+            'turtlebot4_ros_to_mqtt_bridge_node = isaac_ros_mqtt_bridge.RosToMqttNodeTurtlebot4:main'
         ],
     },
 )
