@@ -64,9 +64,9 @@ def generate_launch_description():
                               description='Launch ROS scene recorder if true'),
         DeclareLaunchArgument('docking_server_enabled', default_value='false',
                               description='Pause the docking server in initialization'),
-        DeclareLaunchArgument('odom_topic', default_value='/chassis/odom',
+        DeclareLaunchArgument('odom_topic', default_value=['/', LaunchConfiguration('namespace'), '/odom'],
                               description='The topic that publishes nav_msgs/Odometry message.'),
-        DeclareLaunchArgument('battery_state_topic', default_value='/chassis/battery_state',
+        DeclareLaunchArgument('battery_state_topic', default_value=['/', LaunchConfiguration('namespace'), '/battery_state'],
                               description='The topic that publishes battery state message.'),
     ]
 
@@ -111,7 +111,7 @@ def generate_launch_description():
     ros_mqtt_bridge_node = Node(
         name='ros_mqtt_bridge_node',
         package='isaac_ros_mqtt_bridge',
-        executable='ros_to_mqtt_bridge_node',
+        executable='turtlebot4_ros_to_mqtt_bridge_node',
         parameters=[{
             'mqtt_host_name': mqtt_host_name,
             'mqtt_transport': mqtt_transport,
@@ -134,7 +134,7 @@ def generate_launch_description():
     mqtt_ros_bridge_node = Node(
         name='mqtt_ros_bridge_node',
         package='isaac_ros_mqtt_bridge',
-        executable='mqtt_to_ros_bridge_node',
+        executable='turtlebot4_mqtt_to_ros_bridge_node',
         parameters=[{
             'mqtt_host_name': mqtt_host_name,
             'mqtt_transport': mqtt_transport,
