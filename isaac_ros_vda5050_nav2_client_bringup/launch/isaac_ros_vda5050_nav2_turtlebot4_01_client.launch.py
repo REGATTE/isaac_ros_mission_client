@@ -63,7 +63,7 @@ def generate_launch_description():
             default_value=os.path.join(
                 get_package_share_directory(
                     'isaac_ros_vda5050_nav2_client_bringup'),
-                'maps', 'carter_warehouse_navigation.yaml'
+                'maps', 'turtlebot_warehouse_navigation_sample_scene.yaml'
             ),
             description='Full path to map file to load'),
         DeclareLaunchArgument(
@@ -71,7 +71,7 @@ def generate_launch_description():
             default_value=os.path.join(
                 get_package_share_directory(
                     'isaac_ros_vda5050_nav2_client_bringup'),
-                'config', 'carter_navigation_params.yaml'
+                'config', 'turtlebot4_navigation_params_t1.yaml'
             ),
             description='Full path to navigation param file to load'),
         DeclareLaunchArgument(
