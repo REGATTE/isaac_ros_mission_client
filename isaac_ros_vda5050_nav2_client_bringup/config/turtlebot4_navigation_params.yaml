@@ -37,7 +37,7 @@ amcl:
     z_max: 0.05
     z_rand: 0.5
     z_short: 0.05
-    scan_topic: ~/turtlebot4_01/scan
+    scan_topic: /scan
     map_topic: map
     always_reset_initial_pose: false
     first_map_only: false
@@ -55,7 +55,7 @@ bt_navigator:
     use_sim_time: True
     global_frame: map
     robot_abse_name: base_link
-    odom_topic: ~/turtlebot4_01/odom
+    odom_topic: /odom
     bt_loop_duration: 20
     default_server_timeout: 40
     plugin_lib_names:
@@ -118,7 +118,7 @@ velocity_smoother:
     velocity_timeout: 1.0
     # max_accel: [1.0, 0.0, 1.25]
     # max_decel: [-1.0, 0.0, -1.25]
-    odom_topic: "~/turtlebot4_01/odom"
+    odom_topic: "/odom"
     odom_duration: 0.1
 
 controller_server:
@@ -215,7 +215,7 @@ local_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: ~/turtlebot4_01/scan
+          topic: /scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -249,7 +249,7 @@ global_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: ~/turtlebot4_01/scan
+          topic: /scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True

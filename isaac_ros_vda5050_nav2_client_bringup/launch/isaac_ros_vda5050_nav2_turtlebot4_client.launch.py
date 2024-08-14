@@ -71,7 +71,7 @@ def generate_launch_description():
             default_value=os.path.join(
                 get_package_share_directory(
                     'isaac_ros_vda5050_nav2_client_bringup'),
-                'config', 'turtlebot4_navigation_params_t1.yaml'
+                'config', 'turtlebot4_navigation_params.yaml'
             ),
             description='Full path to navigation param file to load'),
         DeclareLaunchArgument(
@@ -142,7 +142,7 @@ def generate_launch_description():
 
     mission_client_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([mission_client_launch_dir,
-                                       '/isaac_ros_vda5050_client.launch.py']),
+                                       '/isaac_ros_vda5050_turtlebot4_client.launch.py']),
         launch_arguments={'namespace': namespace}.items()
     )
 

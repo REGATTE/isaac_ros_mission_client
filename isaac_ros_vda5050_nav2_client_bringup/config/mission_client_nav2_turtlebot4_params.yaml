@@ -16,18 +16,18 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 ---
-nav2_client_node:
+turtlebot4_nav2_client_node:
   ros__parameters:
     update_feedback_period: 10.0
     verbose: False
 
-ros_mqtt_bridge_node:
+turtlebot4_ros_mqtt_bridge_node:
   ros__parameters:
     mqtt_host_name: localhost
     mqtt_pub_topic: uagv/v2/turtlebot4_01/state
     ros_subscriber_type: vda5050_msgs/AGVState
 
-mqtt_ros_bridge_node:
+turtlebot4_mqtt_ros_bridge_node:
   ros__parameters:
     mqtt_host_name: localhost
     mqtt_sub_topic: uagv/v2/turtlebot4_01/order

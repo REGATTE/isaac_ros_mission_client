@@ -90,9 +90,9 @@ def generate_launch_description():
     odom_topic = LaunchConfiguration('odom_topic')
     battery_state_topic = LaunchConfiguration('battery_state_topic')
 
-    client_node = Node(
+    turtlebot4_client_node = Node(
         namespace=namespace,
-        name='nav2_client_node',
+        name='turtlebot4_nav2_client_node',
         package='isaac_ros_vda5050_nav2_client',
         executable='vda5050_nav2_client',
         parameters=[{
@@ -108,8 +108,8 @@ def generate_launch_description():
         output='screen'
     )
 
-    ros_mqtt_bridge_node = Node(
-        name='ros_mqtt_bridge_node',
+    turtlebot4_ros_mqtt_bridge_node = Node(
+        name='turtlebot4_ros_mqtt_bridge_node',
         package='isaac_ros_mqtt_bridge',
         executable='turtlebot4_ros_to_mqtt_bridge_node',
         parameters=[{
@@ -131,8 +131,8 @@ def generate_launch_description():
         output='screen'
     )
 
-    mqtt_ros_bridge_node = Node(
-        name='mqtt_ros_bridge_node',
+    turtlebot4_mqtt_ros_bridge_node = Node(
+        name='turtlebot4_mqtt_ros_bridge_node',
         package='isaac_ros_mqtt_bridge',
         executable='turtlebot4_mqtt_to_ros_bridge_node',
         parameters=[{
@@ -166,8 +166,8 @@ def generate_launch_description():
 
     return LaunchDescription(launch_args +
                              [
-                                 client_node,
-                                 ros_mqtt_bridge_node,
-                                 mqtt_ros_bridge_node,
+                                 turtlebot4_client_node,
+                                 turtlebot4_ros_mqtt_bridge_node,
+                                 turtlebot4_mqtt_ros_bridge_node,
                                  recorder_node,
                              ])
