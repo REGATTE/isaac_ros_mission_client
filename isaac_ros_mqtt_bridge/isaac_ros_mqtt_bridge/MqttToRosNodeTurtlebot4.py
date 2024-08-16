@@ -47,7 +47,7 @@ class MqttToRosNodeTurtlebot4(Node):
                 ('interface_name', 'uagv'),
                 ('major_version', 'v2'),
                 ('manufacturer', 'irobot'),
-                ('serial_number', 'turtlebot4_01'),
+                ('serial_number', 'turtlebot4'),
                 ('mqtt_client_name', 'MqttToRosBridgeTurtlebot4'),
                 ('mqtt_host_name', 'localhost'),
                 ('mqtt_port', 1883),

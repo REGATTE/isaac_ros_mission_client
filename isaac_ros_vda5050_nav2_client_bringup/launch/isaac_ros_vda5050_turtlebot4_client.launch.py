@@ -39,7 +39,7 @@ def generate_launch_description():
                               description='VDA5050 major version.'),
         DeclareLaunchArgument('manufacturer', default_value='irobot',
                               description='Manufacturer of the AGV.'),
-        DeclareLaunchArgument('serial_number', default_value='turtlebot4_01',
+        DeclareLaunchArgument('serial_number', default_value='turtlebot4',
                               description='Unique AGV Serial Number'),
         DeclareLaunchArgument('ros_subscriber_type', default_value='vda5050_msgs/AGVState',
                               description='ROS message type to convert to outgoing MQTT message'),

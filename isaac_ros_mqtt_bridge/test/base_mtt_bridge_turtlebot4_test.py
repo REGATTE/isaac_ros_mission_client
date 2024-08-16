@@ -28,8 +28,8 @@ import rclpy
 
 from std_msgs.msg import String
 
-FROM_MQTT_TOPIC = 'uagv/v2/irobot/turtlebot4_01/state'
-TO_MQTT_TOPIC = 'uagv/v2/irobot/turtlebot4_01/order'
+FROM_MQTT_TOPIC = 'uagv/v2/irobot/turtlebot4/state'
+TO_MQTT_TOPIC = 'uagv/v2/irobot/turtlebot4/order'
 FROM_ROS_TOPIC = 'bridge_pub_topic'
 TO_ROS_TOPIC = 'to_ros_topic'
 
